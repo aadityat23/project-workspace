@@ -68,7 +68,7 @@ function Overview() {
       </div>
 
       {/* Primary project area */}
-      <div className="mt-6 grid gap-6 xl:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)]">
+      <div className="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)]">
         {lead ? <LeadProject id={lead.id} /> : null}
 
         <section>
@@ -122,7 +122,7 @@ function Overview() {
       </div>
 
       {/* Documents + activity */}
-      <div className="mt-10 grid gap-8 xl:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)]">
+      <div className="mt-10 grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)]">
         <section>
           <header className="flex h-9 items-center justify-between border-b border-foreground/80">
             <h2 className="text-[11px] font-semibold tracking-[0.12em] uppercase">Recent documents</h2>
@@ -186,7 +186,7 @@ function LeadProject({ id }: { id: string }) {
       params={{ projectId: p.id }}
       className="group grid overflow-hidden rounded-[6px] border border-border bg-card md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
     >
-      <div className="relative min-h-[280px]">
+      <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[280px]">
         <img
           src={projectImage(p.id)}
           alt={`${p.name} site`}
