@@ -56,7 +56,7 @@ function MobileShell() {
 
   return (
     <div className="min-h-dvh bg-surface sm:flex sm:items-center sm:justify-center sm:py-6">
-      <div className="relative isolate flex h-dvh w-full flex-col overflow-hidden bg-background sm:h-[844px] sm:max-h-[calc(100dvh-48px)] sm:w-[390px] sm:rounded-[8px] sm:border sm:border-border-strong">
+      <div className="relative isolate flex h-dvh w-full flex-col overflow-hidden bg-background pt-[env(safe-area-inset-top)] pr-[env(safe-area-inset-right)] pl-[env(safe-area-inset-left)] sm:p-0 sm:h-[844px] sm:max-h-[calc(100dvh-48px)] sm:w-[390px] sm:rounded-[8px] sm:border sm:border-border-strong">
         {splash || !allowed ? (
           <MobileSplash />
         ) : (

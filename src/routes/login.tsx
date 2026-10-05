@@ -56,7 +56,7 @@ function Login() {
     "block h-12 w-full rounded-[6px] border border-border-strong bg-card px-3.5 text-[15px] text-foreground outline-none transition-[border-color,box-shadow] duration-150 placeholder:text-muted-foreground/70 hover:border-muted-foreground/50 focus:border-primary focus:ring-[3px] focus:ring-primary/15";
 
   return (
-    <div className="grid min-h-screen grid-cols-1 bg-card lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+    <div className="grid min-h-dvh grid-cols-1 bg-card lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
       <div className="relative hidden flex-col justify-between overflow-hidden bg-navy px-12 py-11 lg:flex">
         <HeroVideo />
         <div aria-hidden className="absolute inset-0 bg-navy/25" />

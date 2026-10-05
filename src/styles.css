@@ -423,3 +423,12 @@
   .splash-rise { animation: splash-fade 200ms ease-out both; }
   .splash-measure { animation: none; }
 }
+
+/* iOS Safari zooms (and then pans sideways) when a focused field is under 16px. */
+@media (pointer: coarse) and (max-width: 1023px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
