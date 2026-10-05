@@ -1,12 +1,11 @@
-import logo from "@/assets/maa-logo.png.asset.json";
-import logoWhite from "@/assets/maa-logo-white.png.asset.json";
+/** Real company logo, served from /public/assets so it works on any host (Lovable, Vercel, etc.). */
 
 /** Real company logo. Default: on a white plate. `bare`: transparent mark for dark/photographic surfaces. */
 export function BrandMark({ size = 36, className = "", bare = true }: { size?: number; className?: string; bare?: boolean }) {
   if (bare) {
     return (
       <img
-        src={logoWhite.url}
+        src="/assets/maa-logo-white.png"
         alt=""
         aria-hidden
         className={`shrink-0 object-contain ${className}`}
@@ -20,7 +19,7 @@ export function BrandMark({ size = 36, className = "", bare = true }: { size?: n
       className={`flex shrink-0 items-center justify-center rounded-[4px] bg-card ${className}`}
       style={{ width: size * 1.45, height: size }}
     >
-      <img src={logo.url} alt="" className="h-[82%] w-[88%] object-contain" />
+      <img src="/assets/maa-logo.png" alt="" className="h-[82%] w-[88%] object-contain" />
     </span>
   );
 }
